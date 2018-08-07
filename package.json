@@ -1,0 +1,30 @@
+{
+  "name": "au",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm run start --prefix client",
+    "dev": "npm-run-all --parallel server client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^0.2.0",
+    "@grpc/proto-loader": "^0.1.0",
+    "cookie-session": "^2.0.0-beta.3",
+    "express": "^4.16.3",
+    "grpc": "^1.13.0",
+    "mongoose": "^5.1.6",
+    "mysql": "^2.15.0",
+    "nodemon": "^1.17.5",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.3"
+  }
+}
