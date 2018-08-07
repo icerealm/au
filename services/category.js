@@ -1,16 +1,15 @@
 const client = require('./protoApi.js')
 
-const printResponse = (error, response) => {
-    if (error){
-        console.log("Error:", error)
-    }else {
-        console.log(response)
-    }
-}
-
 module.exports = {
-    findCategories: () => {
-        client.findCatetories({query:"query by js"}, printResponse)
+    findCategories: httpResponse => {
+        client.findCatetories({query:""}, (err, data) => {
+            if (error) {
+                httpResponse.status(500).send({
+                    message: err
+                })
+            }
+            httpResponse.send(data)
+        })
     },
     testCategories: () => {
         return ["test1", "test2"]
